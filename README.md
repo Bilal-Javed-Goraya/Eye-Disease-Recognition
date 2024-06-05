@@ -120,7 +120,7 @@ After a successful prediction, the result page (`predict.html`) will display:
 ## Result
 
 ### Run the Flask App
-![Run App](https://github.com/Bilal-Javed-Goraya/Eye-Disease-Recognition/blob/main/Run App.JPG)
+![Run App](https://github.com/Bilal-Javed-Goraya/Eye-Disease-Recognition/blob/main/App.JPG)
 
 ### Flask App
 ![Flask App ](https://github.com/Bilal-Javed-Goraya/Eye-Disease-Recognition/blob/main/App1.JPG)
@@ -129,7 +129,11 @@ After a successful prediction, the result page (`predict.html`) will display:
 
 ![Flask App ](https://github.com/Bilal-Javed-Goraya/Eye-Disease-Recognition/blob/main/App3.JPG)
 
+### Upload Image for Prediction
+
 ![Upload Image for Prediction](https://github.com/Bilal-Javed-Goraya/Eye-Disease-Recognition/blob/main/App4.JPG)
+
+### Upload Image from Ocular Disease folder images
 
 ![Upload Image from Ocular Disease folder images](https://github.com/Bilal-Javed-Goraya/Eye-Disease-Recognition/blob/main/uploadimage.JPG)
 ### Prediction
