@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <!-- <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" /> -->
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon" />
+
+
+
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Yeseva+One&display=swap" rel="stylesheet">
+
+  
+
+  <!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+<!-- fonts style -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- font awesome style -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+
+<!-- responsive style -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}" />
+
+<title>BTH</title>
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <span>BTH</span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/"> Home <span class="sr-only">(current)</span></a>
+
+              </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link" href="contact.html">Contact Us</a> -->
+                <a class="nav-link" href="#contact">Contact Us</a>
+
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      WELCOME TO THE<br>
+                      AI BASED EYE DISEASE DETECTOR
+                    </h1>
+                    <p>
+                      Experience accurate predictions and insights about eye diseases using advanced AI deep learning technology.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class=" col-lg-10 mx-auto">
+                      <div class="img-box">
+                        <img src="{{ url_for('static', filename='images/slider-img.png') }}" alt="Slider Image"/>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_containerheading_center">
+        <h2>
+          MODEL DESIGN WORKFLOW
+        </h2>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/s1.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Data Collection and Preprocessing
+              </h4>
+              <p>
+                Gather and prepare the dataset, including cleaning and formatting.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/s2.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Model Selection and Architecture Design
+              </h4>
+              <p>
+                Choose the deep learning architecture and design the model structure.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/s3.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Training the Model
+              </h4>
+              <p>
+                Train the model by feeding data, adjusting parameters, and minimizing loss.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/s4.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Model Evaluation
+              </h4>
+              <p>
+                Assess model performance using evaluation metrics and validate on test data.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/s5.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Hyperparameter Tuning
+              </h4>
+              <p>
+                Optimize hyperparameters like learning rate, batch size, and dropout rate.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/s6.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Deployment and Monitoring
+              </h4>
+              <p>
+                Deploy the model, monitor performance, and update as needed for predictions on new data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+  <!-- model section -->
+
+  <section class="model_section layout_padding">
+    <div class="container">
+      <div class="heading_containerheading_center">
+        <h2>
+          DISEASES MODEL TRAINED ON
+        </h2>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/m1.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Cataract Disease
+              </h4>
+              <p>
+                Cataract is a clouding of the lens in the eye, leading to blurred vision.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/m2.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Diabetic Retinopathy
+              </h4>
+              <p>
+                A complication of diabetes that affects the blood vessels of the retina, potentially leading to blindness.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/m3.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Glaucoma
+              </h4>
+              <p>
+                A group of eye conditions that damage the optic nerve, often leading to vision loss.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/m4.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Ocular Disease:
+              </h4>
+              <p>
+                A broad category of diseases affecting various eye structures.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/m5.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Retina Disease
+              </h4>
+              <p>
+                Conditions affecting the retina, which can lead to vision loss.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/m6.png') }}" alt="Slider Image"/>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Normal Eye
+              </h4>
+              <p>
+                A normal eye indicates that no significant eye disease is detected in the uploaded image.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end model section -->
+
+  <!-- TEST FUNCTION -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                EYE DISEASE PREDICTION
+              </h2>
+            </div>
+            <p>
+              To predict eye diseases, please upload a picture in JPG format and click the "Submit" button below. Our system will analyze the JPG image and provide you with the prediction result for eye diseases.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="Slider Image"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="upload-container">
+            <form action="/predict" method="post" enctype="multipart/form-data">
+              <label for="inputTag" class="custom-file-upload">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#F9FBD1">
+                  <!-- Updated fill color -->
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.10 0-2 .90-2 2v12c0 1.10.90 2 2 2h12c1.10 0-2-.90-2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z" />
+                </svg>
+                Upload Image
+              </label>
+              <input id="inputTag" type="file" name="file" accept=".jpg, .jpeg">
+              <input type="submit" value="Predict" class="btn btn-custom" id="predict-btn">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding-bottom" id="contact">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          FEEDBACK
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-lg-6 mx-auto">
+          <div class="form_container">
+            <form action="/submit_message" method="post" id="message-form">
+              <div>
+                  <input type="text" name="name" placeholder="Your Name" />
+              </div>
+              <div>
+                  <input type="email" name="email" placeholder="Your Email" />
+              </div>
+              <div>
+                  <input type="text" name="phone" placeholder="Your Phone" />
+              </div>
+              <div>
+                  <input type="text" name="message" class="message-box" placeholder="Message" />
+              </div>
+              <div class="btn_box">
+                  <button type="button" id="submit-button">SEND</button>
+              </div>
+              <div id="success-message" style="display: none;">Message submitted successfully</div>
+          </form>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="info_contact">
+            <h4>
+              CONTACT DETAILS
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Lahore, Pakistan
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  #
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  bth@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-md-3">
+          <div class="subscription">
+            <h4>
+              SUBSCRIBE TO GET LATEST NEWS
+            </h4>
+            <form action="#">
+              <input type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- end info section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By BTH
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+</body>
+
+
+  <!-- jQery -->
+  <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+
+  <!-- bootstrap js -->
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+  <!-- custom js -->
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('message-form');
+      const submitButton = document.getElementById('submit-button');
+      const successMessage = document.getElementById('success-message');
+
+      submitButton.addEventListener('click', function () {
+          const formData = new FormData(form);
+
+          fetch('/submit_message', {
+              method: 'POST',
+              body: formData,
+          })
+          .then(response => response.text())
+          .then(data => {
+              if (data === 'Message submitted successfully') {
+                successMessage.style.display = 'block';
+                  submitButton.textContent = 'Submitted';
+                  submitButton.disabled = true;
+              } else {
+                  console.error('Submission error:', data);
+              }
+          })
+          .catch(error => {
+              console.error('Fetch error:', error);
+          });
+      });
+  });
+
+</script>
+
+
+</html>

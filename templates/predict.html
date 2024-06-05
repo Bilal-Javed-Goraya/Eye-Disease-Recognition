@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" />
+    <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link href="{{ url_for('static', filename='css/stylep.css') }}" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- font awesome style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
+
+    <!-- responsive style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}" />
+
+    <title>Eye Disease Recognition App<br>
+         Prediction: </title>
+</head>
+
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="/">
+            <span>BTH</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="/"> Home <span class="sr-only">(current)</span></a>
+
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+
+                </li>
+            </ul>
+            </div>
+        </nav>
+        </div>
+    </header>
+</div>
+
+<body>
+    <div class="container">
+        <h1 class="title-text">AI Based Eye Disease Recognition App <br>
+             Prediction :</h1>
+        <div class="prediction">
+            <div class="predicted-image">
+                <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">  
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="class-info">
+                <h2>Disease : {{ predicted_class_name }}</h2>
+            </div>
+            <div class="class-description">
+                <h2>Description</h2>
+                <p>{{ predicted_class_description }}</p>
+            </div>
+            <div class="symptoms">
+                <h3>Symptoms</h3>
+                <ul>
+                    {% for symptom in predicted_class_symptoms %}
+                        <li>{{ symptom }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="treatment">
+                <h3>Treatment</h3>
+                <p>{{ treatment_info[predicted_class_name]['description'] }}</p>
+                <h4>Medicines (Consult a doctor before use)</h4>
+                <ul>
+                    {% for medicine in treatment_info[predicted_class_name]['medicines'] %}
+                        <li>{{ medicine }}</li>
+                    {% endfor %}
+                </ul>                  
+            </div>
+            <div>
+                <p class="disclaimer">Disclaimer: It's important to consult a medical professional before taking any medications. The information provided here is for educational purposes only and should not be considered medical advice.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+    <!-- contact section -->
+  <section class="contact_section layout_padding-bottom" id="contact">
+        <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                FEEDBACK
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-lg-6 mx-auto">
+                <div class="form_container">
+                    <form action="/submit_message" method="post" id="message-form">
+                        <div>
+                            <input type="text" name="name" placeholder="Your Name" />
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Your Email" />
+                        </div>
+                        <div>
+                            <input type="text" name="phone" placeholder="Your Phone" />
+                        </div>
+                        <div>
+                            <input type="text" name="message" class="message-box" placeholder="Message" />
+                        </div>
+                        <div class="btn_box">
+                            <button type="button" id="submit-button">SEND</button>
+                        </div>
+                        <div id="success-message" style="display: none;">Message submitted successfully</div>
+                    </form>  
+                </div>
+            </div>
+        </div>
+        </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="info_contact">
+            <h4>
+              CONTACT DETAILS
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Lahore, Pakistan
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  #
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  bth@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-md-3">
+          <div class="subscription">
+            <h4>
+              SUBSCRIBE TO GET LATEST NEWS
+            </h4>
+            <form action="#">
+              <input type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+        <div class="container">
+            <p>
+                 &copy; <span id="displayYear"></span> All Rights Reserved By BTH
+            </p>
+        </div>
+  </footer>
+</body>
+
+
+<!-- footer section -->
+
+<!-- jQery -->
+<script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+
+<!-- bootstrap js -->
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+<!-- custom js -->
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('message-form');
+        const submitButton = document.getElementById('submit-button');
+        const successMessage = document.getElementById('success-message');
+  
+        submitButton.addEventListener('click', function () {
+            const formData = new FormData(form);
+  
+            fetch('/submit_message', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === 'Message submitted successfully') {
+                  successMessage.style.display = 'block';
+                    submitButton.textContent = 'Submitted';
+                    submitButton.disabled = true;
+                } else {
+                    console.error('Submission error:', data);
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+            });
+        });
+    });
+  
+  </script>
+
+
+</html>
